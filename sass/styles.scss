@@ -252,7 +252,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-min.jpg') center center;
+  background: url('../img/rokha.png') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -287,6 +287,7 @@ Hero
 }
 .navigation {
   transition: all 300ms ease-in-out;
+  margin-top: -10px;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -654,7 +655,7 @@ Instagram
 }
 
 /* ==========================================================================
-Engagement Pics
+Gallery
 ========================================================================== */
 #eng-pics {
   img {
