@@ -442,3 +442,22 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+
+function checkPasscode() {
+    const passcode = document.getElementById('passcode').value;
+    const correctPasscode = '1234'; // Set your passcode here
+    const errorMessage = document.getElementById('error-message');
+  
+    console.log('Entered Passcode:', passcode);
+  
+    if (passcode === correctPasscode) {
+      console.log('Passcode is correct');
+      localStorage.setItem('passcodeAccepted', 'true');
+      errorMessage.textContent = ''; // Clear any previous error messages
+      window.location.href = 'index.html'; // Redirect to the index page or the main content page
+    } else {
+      console.log('Passcode is incorrect');
+      errorMessage.textContent = 'Incorrect passcode. Please try again.';
+    }
+  }

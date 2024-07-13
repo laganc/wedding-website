@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/lock.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log(localStorage);
+        const passcodeAccepted = localStorage.getItem('passcodeAccepted');
+        console.log('passcodeAccepted from localStorage:', passcodeAccepted);
+
+        if (passcodeAccepted == "true") {
+            console.log('Redirecting to index.html');
+            window.location.href = 'index.html';
+        }
+    });
+  </script>
+  <title>Enter Passcode</title>
+</head>
+<body>
+  <div class="lock-screen">
+    <h1>Enter Passcode</h1>
+    <input type="password" id="passcode" placeholder="Passcode">
+    <button onclick="checkPasscode()">Submit</button>
+    <p id="error-message"></p>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
